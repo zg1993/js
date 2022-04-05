@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet/less" type="text/css" href="./../assets/styles/screen.less" />
+    <script type="text/javascript">
+      less = {
+        env: 'development',
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: 'comments',
+        relativeUrls: false,
+        rootpath: ':/a.com/',
+      };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="dom-screen">
+      <div class="header"></div>
+      <!-- 背景内容 -->
+      <div class="container">
+        <div class="top"></div>
+        <div class="test">
+          <div class="content">
+            <!-- 正式内容 3列 浮动方式布局 -->
+            <!-- <div class="column1"></div>
+            <div class="column2"></div>
+            <div class="column3"></div> -->
+            <!-- #include file="./contentlayout.hmtl" -->
+            <!-- <html></html> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $('.content').load('./content.html');
+  </script>
+</html>

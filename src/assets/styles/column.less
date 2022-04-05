@@ -1,0 +1,107 @@
+html body {
+  margin: 0;
+  width: 100%;
+}
+h3 {
+  height: 40px;
+  margin: 20px 0 0;
+}
+// 圣杯布局 负边距法
+.wrap {
+  width: 100%;
+  height: 300px;
+  background-color: aqua;
+  float: left;
+}
+.wrap .center_margin {
+  margin: 0 210px;
+  background-color: blue;
+  height: 300px;
+}
+.left_margin,
+.right_margin {
+  float: left;
+  width: 200px;
+  height: 300px;
+  background-color: darkorange;
+}
+.left_margin {
+  margin-left: -100%;
+  background-color: brown;
+}
+.right_margin {
+  margin-left: -200px;
+}
+//flex 弹性布局
+// .container {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .container > div {
+//   height: 700px;
+// }
+// .left_box {
+//   width: 300px;
+//   margin: 0 0 0 4px;
+//   background-color: red;
+// }
+// .center_box {
+//   flex: 1;
+//   background-color: aqua;
+//   margin: 0 4px 0 4px;
+// }
+// .right_box {
+//   width: 300px;
+//   margin: 0 4px 0 0;
+//   background-color: gray;
+// }
+
+//自身浮动法
+// .left {
+//   float: left;
+//   height: 400px;
+//   width: 450px;
+//   background-color: black;
+// }
+// .right {
+//   height: 400px;
+//   width: 450px;
+//   float: right;
+//   background-color: black;
+// }
+// .center {
+//   background-color: aqua;
+//   height: 400px;
+//   margin: 0 460px;
+// }
+// 绝对定位法
+// html body {
+//   margin: 0;
+//   width: 100%;
+// }
+// h3 {
+//   height: 5vh;
+//   margin: 2vh 0 0;
+// }
+// .left {
+//   position: absolute;
+//   top: 7vh;
+//   left: 2vh;
+//   width: 45vh;
+//   height: 70vh;
+//   background-color: red;
+// }
+// .right {
+//   position: absolute;
+
+//   top: vh;
+//   right: 2vh;
+//   width: 45vh;
+//   height: 70vh;
+//   background-color: gray;
+// }
+// .center {
+//   margin: 0vh 48vh;
+//   height: 70vh;
+//   background-color: blue;
+// }

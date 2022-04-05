@@ -1,0 +1,57 @@
+.header {
+  border: 1px solid black;
+  height: 44px;
+}
+.container {
+  position: relative;
+  border: dashed red;
+  height: 700px;
+  .top {
+    background-color: blue;
+    width: 100%;
+    height: 60px;
+  }
+  .test {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // height: 640px;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    // background-color: aqua;
+    .content {
+      position: relative;
+      width: 96%;
+      border: 1px solid black;
+      border-bottom-width: 20px;
+    }
+  }
+}
+
+.column1 {
+  float: left;
+  background-color: aqua;
+}
+.column3 {
+  background-color: purple;
+  margin: auto;
+}
+.column2 {
+  float: right;
+  background-color: green;
+}
+.content > div {
+  width: 33.33%;
+  height: 100%;
+}
+// .container > .top {
+//   background-color: blue;
+//   width: 100px;
+//   height: 70px;
+// }
+// .container > .content {
+//   width: 1000px;
+//   border: dashed black;
+// }
