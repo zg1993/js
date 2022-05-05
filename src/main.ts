@@ -10,6 +10,7 @@ import {
   GridComponent,
 
 } from "echarts/components";
+import {Form} from 'ant-design-vue'
 
 import { CanvasRenderer } from "echarts/renderers";
 import { BarChart } from "echarts/charts";
@@ -18,6 +19,7 @@ import 'ant-design-vue/dist/antd.css';
 import {Button, message} from "ant-design-vue";
 // router 
 import setUpRouter from './router/index';
+import {mockXHR} from '@/mock/index.ts'
 
 use([
   CanvasRenderer,
@@ -30,8 +32,12 @@ use([
   GridComponent,
 ]);
 
-console.log("-----"+ process.env)
-
+console.log(process.env)
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV === 'mock') {
+  // require('./mock/index.ts')
+  mockXHR()
+}
 const app = createApp(App);
 setUpRouter(app);
 app.use(Antd);
