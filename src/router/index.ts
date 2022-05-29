@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from "vue-router";
+import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import routes from './routes/localRoutes';
 import {App} from 'vue';
 import { processExpression } from "@vue/compiler-core";
@@ -6,7 +6,8 @@ import { processExpression } from "@vue/compiler-core";
 
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    // mode: 'history',
+    history: createWebHistory(),
     routes,
 });
 

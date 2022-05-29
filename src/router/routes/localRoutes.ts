@@ -1,20 +1,42 @@
-const About = () => import('./../../views/start/about.vue')
-const User = () => import('./../../views/start/User.vue')
-const routes = [
-    {   name:'H',
-        path: '/',
-        component: () => import('./../../views/start/home.vue'),
-    },
-    {
-        name: 'A',
-        path: '/about',
-        component: () => import('./../../views/start/about.vue'),
-    },
-    {
-        path:'/user/:id',
-        component: () => import('./../../views/start/user.vue'),
-        name: 'user'
-    },
+import type { RouteRecordRaw } from "vue-router";
+// import TabsView from '@/layouts/tabs/TabsView.vue';
+// import BlankView from '@/layouts/BlankView.vue'
+// import PageView from '@/layouts/pageView.vue'
+
+// const carbonManage = () => import("@/layouts/BlankView.vue");
+// const rule = ()=>import("@/views/carbonManage/index.vue");
+const view = {
+  tabs: () => import("@/layouts/tabs/TabsView.vue"),
+  blank: () => import("@/layouts/BlankView.vue"),
+  page: () => import("@/layouts/pageView.vue"),
+};
+
+const routes: RouteRecordRaw[] = [
+  {
+    name: "首页",
+    path: "/",
+    component: view.tabs,
+    children: [
+      {
+        name: "用户管理",
+        path: "userManage",
+        component: () => import("@/views/userManage/index.vue"),
+        children: [
+          // {
+          //   name:"用户列表",
+          //   path:"list",
+          //   component: () => import
+          // },
+          // {
+          //   name: "用户详情",
+          //   path: "detail",
+          //   component: rule,
+          // },
+        ],
+      },
+    ],
+    // component: () => import('./../../views/start/home.vue'),
+  },
 ];
-console.log('localRoutes' + document.location.toString());
- export default routes;
+console.log("localRoutes" + document.location.toString());
+export default routes;

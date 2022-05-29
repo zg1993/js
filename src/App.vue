@@ -55,6 +55,7 @@ provide(THEME_KEY, "dark");
 </script>
 
 <template>
+<!-- <router-link to="/user/zg">go to home</router-link> -->
 <!-- <br>
   <router-link to="/">go to home</router-link>
   <router-link to="/about">got to about</router-link>
@@ -80,5 +81,8 @@ provide(THEME_KEY, "dark");
 }
 .chart {
   height: 40vh;
+}
+.o{
+  background-color: red;
 }
 </style>
