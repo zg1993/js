@@ -4,8 +4,8 @@ import { processExpression } from '@vue/compiler-core'
 import {resolve} from 'path'
 
 
-
-
+console.log(__dirname)
+console.log(resolve(__dirname, 'src'))
 function pathResolve(){
   console.log(process.cwd);
 }
@@ -17,7 +17,8 @@ export default defineConfig({
   },
   resolve: {
     alias:{
-      "@": '/src',
+      // "@": '/src',
+      "@": resolve(__dirname, 'src'),
     },
   }
 })

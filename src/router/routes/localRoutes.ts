@@ -1,4 +1,5 @@
 import type { RouteRecordRaw } from "vue-router";
+// import {resolve} from "path"
 // import TabsView from '@/layouts/tabs/TabsView.vue';
 // import BlankView from '@/layouts/BlankView.vue'
 // import PageView from '@/layouts/pageView.vue'
@@ -35,8 +36,8 @@ const routes: RouteRecordRaw[] = [
         ],
       },
     ],
-    // component: () => import('./../../views/start/home.vue'),
   },
+  {name: "Test", path: "/test", component: ()=>import("@/views/Test.vue")},
 ];
 console.log("localRoutes" + document.location.toString());
 export default routes;

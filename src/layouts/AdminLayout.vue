@@ -3,7 +3,7 @@
     <a-layout-header>
       <div class="logo"></div>
       <a-menu mode="horizontal" theme="dark" class="layout-header-menu">
-        <a-menu-item key="1">Nav 1</a-menu-item>
+        <a-menu-item key="test" @click="router.push('/test')">Test</a-menu-item>
         <a-menu-item key="2">Nav 2</a-menu-item>
         <a-menu-item key="3">Nav 3</a-menu-item>
       </a-menu>
@@ -55,6 +55,8 @@
   </a-layout>
 </template>
 <script lang="ts" setup>
+import {useRouter,} from "vue-router"
+const router = useRouter()
 
 </script>
 <style lang="less" scoped>
