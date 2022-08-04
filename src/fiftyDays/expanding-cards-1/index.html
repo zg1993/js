@@ -9,23 +9,59 @@
 </head>
 <body>
     <div class="container">
-        <div style="background-image: url(./image/1.jpg); flex: 0 1 auto" class="img">1</div>
-        <div style="background-image: url(./image/2.jpg); flex: 0 1 auto" class="img">2</div>
-        <div style="background-image: url(./image/3.jpg); flex: 0 1 auto" class="img">3</div>
-        <div style="background-image: url(./image/4.jpg); flex: 0 1 auto">4</div>
-        <div style="background-image: url(./image/5.jpg); flex: 0 1 auto">5</div>
+        <div style="background-image: url(./image/1.jpg); " class="img"><h3>1</h3></div>
+        <div style="background-image: url(./image/2.jpg); " class="img"><h3>2</h3></div>
+        <div style="background-image: url(./image/3.jpg); " class="img"><h3>3</h3></div>
+        <div style="background-image: url(./image/4.jpg); " class="img"><h3>4</h3></div>
+        <div style="background-image: url(./image/5.jpg); " class="img"><h3>5</h3></div>
     </div>
-    <script src="./script.js"></script>
+    
+    
+    <script src="./script.js">
+        
+    </script>
 </body>
 </html>
 <style>
+    
     body{
-        /* height: 100%; */
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+    }
+    .img{
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        flex: 1;
+    }
+    .img h3{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        margin: 0;
+        opacity: 0;
     }
     .container{
         display: flex;
-        height:800px;
+        height:80vh;
+        width: 90vw;
+        margin: auto 20px;
     }
+    .container div{
+        width: 100px;
+        border-radius: 50px;
+        margin: 0 10px;
+    }
+    /* .container div:first-child {
+        width: 700px;
+    } */
+    .container div:active{
+        width: 700px;
+        flex: 10;
+     }
 
         
 
