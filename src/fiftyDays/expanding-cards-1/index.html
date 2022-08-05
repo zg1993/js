@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <div style="background-image: url(./image/1.jpg); " class="img"><h3>1</h3></div>
+        <div style="background-image: url(./image/1.jpg); " class="img active"><h3>1</h3></div>
         <div style="background-image: url(./image/2.jpg); " class="img"><h3>2</h3></div>
         <div style="background-image: url(./image/3.jpg); " class="img"><h3>3</h3></div>
         <div style="background-image: url(./image/4.jpg); " class="img"><h3>4</h3></div>
@@ -36,6 +36,9 @@
         background-repeat: no-repeat;
         position: relative;
         flex: 1;
+        /* transition: all 0.7s ease-in; */
+        /* transition: flex 0.7s ease-in; */
+        -webkit-transition: all 700ms ease-in;
     }
     .img h3{
         position: absolute;
@@ -46,7 +49,7 @@
     }
     .container{
         display: flex;
-        height:80vh;
+        height:100vh;
         width: 90vw;
         margin: auto 20px;
     }
@@ -55,13 +58,15 @@
         border-radius: 50px;
         margin: 0 10px;
     }
-    /* .container div:first-child {
-        width: 700px;
-    } */
-    .container div:active{
-        width: 700px;
+    .active{
         flex: 10;
-     }
+    }
+    .active h3{
+        opacity: 1;
+        color: #fff;
+        font-size: 24px;
+        transition: opacity 0.4s ease-in 0.3s;
+    }
 
         
 
