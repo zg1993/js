@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Scroll to see the animation</h2>
+    <div class="box ">
+        <h2>Content</h2>
+    </div>
+    <div class="box ">
+        <h2>Content</h2>
+    </div>
+    <div class="box ">
+        <h2>Content</h2>
+    </div>
+    <div class="box ">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <div class="box ">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <div class="box">
+        <h2>Content</h2>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #efedd6;
+        overflow-x: hidden;
+    }
+    h2{
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .box{
+        width: 400px;
+        height: 200px;
+        margin: 10px;
+        background-color: steelblue;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 4px 5px rgb(0 0 0 / 30%);
+        transform:translateX(400%);
+        transition: transform 0.5s ease;
+    }
+    .box:nth-of-type(2n){
+        transform: translateX(-400%);
+    }
+    .box.show{
+        transform: translateX(0);
+    }
+ 
+    .box h2{
+        font-size: 45px;
+        color: #fff;
+    }
+</style>
