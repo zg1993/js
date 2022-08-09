@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>split landing</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="split left">
+        <h1>Playstation 5</h1>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+      <div class="split right">
+        <h1>XBox Series X</h1>
+        <a href="#" class="btn"></a>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+<style>
+  :root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-btn-hover-color: rgba(87, 84, 236, 1);
+    --right-btn-hover-color: rgba(28, 122, 28, 1);
+    --hover-width: 75%;
+    --other-width: 25%;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .container .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  }
+  .container .split.left::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--left-bg-color);
+  }
+  .container .split.right::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--right-bg-color);
+  }
+  .container .left {
+    background: url(../../../50projects50days/split-landing-page/ps.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    
+  }
+  .container .right {
+    background: url(../../../50projects50days/split-landing-page/xbox.jpg);
+    right: 0;
+  }
+  h1 {
+    font-size: 64px;
+    color: #fff;
+    position: absolute;
+    top:25px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  a{
+    font-size: 16px;
+    padding: 24px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+  }
+  .split.left h1, .split.left a{
+    left: 50%;
+  }
+  .split.right h1, .split.right a{
+    left: 20px;
+  }
+  
+</style>
