@@ -13,8 +13,8 @@ let currentStep = 1
 
 prev.addEventListener('click', function(){
     // console.log('click prev')
-    var length = parseInt(window.getComputedStyle(progress).width) - len
-    var length = length > 0 ? length : 0
+    var length_ = parseInt(window.getComputedStyle(progress).width) - len 
+    var length = length_ > 0 ? length_ : 0
     progress.style.width = length.toString() + 'px'
     // console.log(window.getComputedStyle(progress).width)
     stepList[currentStep - 1].classList.remove('active')

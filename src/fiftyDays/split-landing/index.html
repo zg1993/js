@@ -14,10 +14,10 @@
       </div>
       <div class="split right">
         <h1>XBox Series X</h1>
-        <a href="#" class="btn"></a>
+        
         <a href="#" class="btn">Buy Now</a>
       </div>
-    </div>
+    </div>  
     <script src="./script.js"></script>
   </body>
 </html>
@@ -36,6 +36,7 @@
   body {
     height: 100vh;
     margin: 0;
+    overflow: hidden;
   }
   .container {
     position: relative;
@@ -46,7 +47,23 @@
     position: absolute;
     width: 50%;
     height: 100%;
+    overflow: hidden;
+    transition: all 1s ease;
   }
+
+  .container .left {
+    background: url(../../../projects50days/split-landing-page/ps.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    
+  }
+  .container .right {
+    background: url(../../../projects50days/split-landing-page/xbox.jpg);
+    right: 0;
+  }
+
   .container .split.left::before{
     content: '';
     width: 100%;
@@ -61,38 +78,64 @@
     position: absolute;
     background-color: var(--right-bg-color);
   }
-  .container .left {
-    background: url(../../../50projects50days/split-landing-page/ps.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
-    
-  }
-  .container .right {
-    background: url(../../../50projects50days/split-landing-page/xbox.jpg);
-    right: 0;
-  }
+
   h1 {
     font-size: 64px;
     color: #fff;
     position: absolute;
-    top:25px;
+    top:20%;
+    left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
+    
   }
   a{
-    font-size: 16px;
+    font-size: 1rem;
     padding: 24px;
     color: #fff;
     position: absolute;
-    top: 50%;
-  }
-  .split.left h1, .split.left a{
+    top: 40%;
+    width: 15rem;
+    border: #fff solid 0.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
     left: 50%;
+    transform:translateX(-50%);
+  }
+  /* .split.left h1, .split.left a{
+    left: 50%;
+    
   }
   .split.right h1, .split.right a{
-    left: 20px;
+    left: 50%;
+  } */
+  .left a:hover{
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
   }
+  .right a:hover{
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+  }
+  .hover-left .left{
+    width: var(--hover-width)
+  }
+  .hover-left .right{
+    width: var(--other-width);
+  }
+
+  .hover-left .left h1 {
+    /* transform: translateX() */
+  }
+
+  .hover-right .right{
+    width: var(--hover-width);
+  }
+  .hover-right .left{
+    width: var(--other-width);
+  }
+  
   
 </style>
